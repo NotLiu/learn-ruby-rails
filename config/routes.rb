@@ -6,5 +6,7 @@ Rails.application.routes.draw do
   get "/dashboard", to: "articles#dashboard"
   get "/all", to: "articles#all"
 
-  resources :articles
+  resources :articles do
+    resources :comments
+  end
 end
